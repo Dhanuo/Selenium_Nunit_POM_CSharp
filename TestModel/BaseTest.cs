@@ -26,7 +26,11 @@ namespace TestModel
 
             string chromeDriverPath = Path.GetFullPath(Path.Combine(outPutDirectory, relativePath));
 
-            driver = new ChromeDriver(chromeDriverPath);
+            ChromeOptions options = new ChromeOptions();
+
+            options.AddArgument(chromeDriverPath);            
+
+            driver = new ChromeDriver(options);
             driver.Manage().Window.Maximize();
 
             driver.Url = "https://bbc.co.uk";
