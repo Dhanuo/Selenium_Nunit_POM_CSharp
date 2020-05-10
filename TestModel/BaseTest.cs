@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
 using PageObjectModel;
+using System.IO;
+using System.Reflection;
 
 namespace TestModel
 {
@@ -18,7 +20,13 @@ namespace TestModel
         [SetUp]
         public void TestSetup()
         {
-            driver = new ChromeDriver();
+            string outPutDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+            string relativePath = @"..\..\bin\Debug\Drivers\ChromeDriver";
+
+            string chromeDriverPath = Path.GetFullPath(Path.Combine(outPutDirectory, relativePath));
+
+            driver = new ChromeDriver(chromeDriverPath);
             driver.Manage().Window.Maximize();
 
             driver.Url = "https://bbc.co.uk";

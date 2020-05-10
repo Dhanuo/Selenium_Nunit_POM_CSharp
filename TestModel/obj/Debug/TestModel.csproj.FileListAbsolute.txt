@@ -18,3 +18,4 @@ c:\users\avis_\source\repos\Selenium_Nunit_Csharp_Automation_Framework\TestModel
 c:\users\avis_\source\repos\Selenium_Nunit_Csharp_Automation_Framework\TestModel\obj\Debug\TestModel.pdb
 C:\Users\avis_\source\repos\Selenium_Nunit_Csharp_Automation_Framework\TestModel\bin\Debug\PageObjectModel.dll
 C:\Users\avis_\source\repos\Selenium_Nunit_Csharp_Automation_Framework\TestModel\bin\Debug\PageObjectModel.pdb
+C:\Users\avis_\source\repos\Selenium_Nunit_Csharp_Automation_Framework\TestModel\bin\Debug\Drivers\ChromeDriver\chromedriver.exe
