@@ -26,14 +26,13 @@ namespace TestModel
 
             string chromeDriverPath = Path.GetFullPath(Path.Combine(outPutDirectory, relativePath));
 
-            ChromeOptions options = new ChromeOptions();
-            
+            ChromeOptions options = new ChromeOptions();           
 
-            options.AddArgument(chromeDriverPath);
-            options.AddArguments("--verbose");
-            options.AddArguments("--whitelisted-ips='192.168.0.5'");
-
+            options.AddArgument(chromeDriverPath);           
+                        
             driver = new ChromeDriver(options);
+
+            //Open Chrome Driver in Maximize mode
             driver.Manage().Window.Maximize();
 
             driver.Url = "https://bbc.co.uk";
