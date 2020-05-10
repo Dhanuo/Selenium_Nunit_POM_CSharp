@@ -27,8 +27,11 @@ namespace TestModel
             string chromeDriverPath = Path.GetFullPath(Path.Combine(outPutDirectory, relativePath));
 
             ChromeOptions options = new ChromeOptions();
+            
 
-            options.AddArgument(chromeDriverPath);            
+            options.AddArgument(chromeDriverPath);
+            options.AddArguments("--verbose");
+            options.AddArguments("--whitelisted-ips='192.168.0.5'");
 
             driver = new ChromeDriver(options);
             driver.Manage().Window.Maximize();
