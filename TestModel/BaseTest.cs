@@ -20,6 +20,7 @@ namespace TestModel
         [SetUp]
         public void TestSetup()
         {
+            //Get the Chrome Driver Path
             string outPutDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
             string relativePath = @"..\..\bin\Debug\Drivers\ChromeDriver";
